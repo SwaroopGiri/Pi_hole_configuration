@@ -48,7 +48,7 @@ curl -sSL https://install.pi-hole.net | bash
 Walkthrough the text-based wizard and accept all of the default values. When it asks you for which DNS server to use, select one that you feel most comfortable with. If you're planning to run your own recursive DNS server using unbound, select a temporary DNS and we will later change it to custom IP/Port while configuring unbound.
 Make sure to note down the admin console password at the very end of the installer wizard.
 
-**### Adding Adlists**
+**Adding Adlists**
 
 There are a lot of blocklists out there, below are a few that should get you around 2M blocked domains. Login to Pi-Hole (http://YourIP/admin), click on Group Management, then adlists. Paste below list all at once and click on 'Add'. 
 
@@ -103,7 +103,7 @@ https://www.sunshine.it/blacklist.txt
 ```
 With all those blocked domains, there are a few we want whitelisted to prevent possible web surfing issues. So let's install whitelist script.
 
-**### Whitelist script Installation**
+**Whitelist script Installation**
 - Download
 ```
 cd /opt/
