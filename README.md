@@ -142,6 +142,10 @@ sudo /opt/Pi_hole_Whitelist/scripts/whitelist.sh
 This will take a while, you might run through "Database is Locked" alert which can be ignored and let the process complete. When the process completes, 2 million domains will be added into your Pi-hole's Blocklist.
 
 **NOTE** 
+
 If you used all of the block lists above, be prepared to troubleshoot apps or websites that don't work because of blocked domains. If you run across a non-functional site or app, review the Pi-Hole logs for blocked domains and try whitelisting one at a time and re-testing your site/app to see what fixes the problem.
+
+Many content providers (like YouTube / Reddit / Twitch / Spotify / Pandora / Facebook / IMDB / Hulu) now stream/serve ads from the same servers as the content (meaning if you attempt to block the ads using a PiHole you will also block the content).
+Your best bet for blocking any and all ads/telemetry/etc is a multitiered approach of a PiHole as well as browser plugins: uBlock origin / Privacy Badger / CanvasBlocker on Firefox or Canvas Defender on Chrome / Decentraleyes / Smart Referer / Ugly Email / Pixel Block / other security browser plugins (as necessary) to prevent ads and protect your privacy.
 
 Happy Adblocking :)
