@@ -1,6 +1,6 @@
 # How to configure network-wide adblocking with Pi-Hole using raspberry pi
 
-Pi-hole is a Linux network-level advertisement and Internet tracker blocking application[2][3][4][5] which acts as a DNS sinkhole[6] and optionally a DHCP server, intended for use on a private network.[1] It is designed for low-power embedded devices with network capability, such as the Raspberry Pi,[3][7] but supports any Linux machines.
+Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports any Linux machines.
 
 ### Important informaiton
 This tutorial starts assuming that you have a raspberry pi setup with raspberry pi OS and ssh enabled on it. If you're completely new to this and have a raspberry pi straight out of box, just google on how to setup a headless raspberry pi and follow instructions mentioned in first couple of links.
