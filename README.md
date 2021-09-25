@@ -152,3 +152,6 @@ Your best bet for blocking any and all ads/telemetry/etc is a multitiered approa
 
 Happy Adblocking :)
 
+Click [here](https://github.com/SwaroopGiri/Pihole-with-unbound) to know how to further configure Pihole with unbound making it a truly self-contained DNS resolver.
+
+Click [here](https://github.com/SwaroopGiri/Pihole-with-Anonymized-ODOH) to know how to further configure Pihole with DNSCrypt-proxy with ODoH making it an encrypted anonymous DNS Resolver.
