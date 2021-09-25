@@ -1,5 +1,7 @@
 # How to configure network-wide adblocking with Pi-Hole using raspberry pi
 
+Pi-hole is a Linux network-level advertisement and Internet tracker blocking application[2][3][4][5] which acts as a DNS sinkhole[6] and optionally a DHCP server, intended for use on a private network.[1] It is designed for low-power embedded devices with network capability, such as the Raspberry Pi,[3][7] but supports any Linux machines.
+
 ### Important informaiton
 This tutorial starts assuming that you have a raspberry pi setup with raspberry pi OS and ssh enabled on it. If you're completely new to this and have a raspberry pi straight out of box, just google on how to setup a headless raspberry pi and follow instructions mentioned in first couple of links.
 
@@ -149,3 +151,4 @@ Many content providers (like YouTube / Reddit / Twitch / Spotify / Pandora / Fac
 Your best bet for blocking any and all ads/telemetry/etc is a multitiered approach of a PiHole as well as browser plugins: uBlock origin / Privacy Badger / CanvasBlocker on Firefox or Canvas Defender on Chrome / Decentraleyes / Smart Referer / Ugly Email / Pixel Block / other security browser plugins (as necessary) to prevent ads and protect your privacy.
 
 Happy Adblocking :)
+
