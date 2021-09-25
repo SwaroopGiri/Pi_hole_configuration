@@ -45,7 +45,9 @@ SSH into your RPi and type:
 ```
 curl -sSL https://install.pi-hole.net | bash
 ```
-Walkthrough the text-based wizard and accept all of the default values. Make sure to note down raspberry pi's static IP which will be displayed during configuration. We will need it for accessing Pi-hole's web interface and also to configure router to use Pi-hole. When it asks you for which DNS server to use, select one that you feel most comfortable with. If you're planning to run your own recursive DNS server using unbound, select a temporary DNS and we will later change it to custom IP/Port while configuring unbound.
+Walk through the text-based wizard and accept all of the default values. 
+Make sure to note down raspberry pi's static IP which will be displayed during configuration. We will need it for accessing Pi-hole's web interface and also to configure router to use Pi-hole. 
+When it asks you for which DNS server to use, select one that you feel most comfortable with. If you're planning to run your own recursive DNS server with unbound, select a temporary DNS and we will later change it to custom IP/Port while configuring unbound in different section.
 Make sure to note down the admin console password at the very end of the installer wizard.
 
 ### Configuring Router's DHCP settings to point to Pi-hole's DNS.
