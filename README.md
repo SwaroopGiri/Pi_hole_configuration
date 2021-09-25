@@ -17,6 +17,7 @@ sudo apt update
 sudo apt dist-upgrade
 ```
 Wait for the updates to complete. Reboot after the updates, so type **sudo reboot**.
+
 2. Update Raspberry Pi 4 EEPROM (Firmware)
 
 From time to time new Raspberry pi 4 EEPROM (firmware) may be available. This procedure will install an auto-updater and keep you on the latest firmware version. Run these commands below. If it says update required, then merely reboot your RPI with **sudo reboot** and the update will be installed. 
@@ -27,6 +28,7 @@ sudo apt full-upgrade
 sudo apt install rpi-eeprom
 sudo rpi-eeprom-update
 ```
+
 3. Package Removal
 
 Libreoffice and Chromium are space hog on the Raspberry Pi 4 if you've installed OS with recommended software downloads and most likely you won't need it. Plus this makes your backups larger, so let's get rid of it. If you need it, please skip this section.
@@ -45,6 +47,8 @@ curl -sSL https://install.pi-hole.net | bash
 ```
 Walkthrough the text-based wizard and accept all of the default values. When it asks you for which DNS server to use, select one that you feel most comfortable with. If you're planning to run your own recursive DNS server using unbound, select a temporary DNS and we will later change it to custom IP/Port while configuring unbound.
 Make sure to note down the admin console password at the very end of the installer wizard.
+
+**### Adding Adlists**
 
 There are a lot of blocklists out there, below are a few that should get you around 2M blocked domains. Login to Pi-Hole (http://YourIP/admin), click on Group Management, then adlists. Paste below list all at once and click on 'Add'. 
 
@@ -97,3 +101,32 @@ https://raw.githubusercontent.com/CHEF-KOCH/Canvas-fingerprinting-pages/master/C
 https://raw.githubusercontent.com/CHEF-KOCH/WebRTC-tracking/master/WebRTC.txt
 https://www.sunshine.it/blacklist.txt
 ```
+With all those blocked domains, there are a few we want whitelisted to prevent possible web surfing issues. So let's install whitelist script.
+
+**### Whitelist script Installation**
+- Download
+```
+cd /opt/
+sudo git clone https://github.com/Soundium/Pi_hole_Whitelist.git
+sudo chmod +x /opt/Pi_hole_Whitelist/scripts/whitelist.sh
+```
+- Make the script to run the script at 1 AM every day.
+
+`sudo nano /etc/crontab`
+
+- Add this line at the end of the file:       
+`0 1 * * *   root    /opt/Pi_hole_Whitelist/scripts/whitelist.sh`
+
+CTRL + X then Y and Enter
+
+- First run
+```
+sudo /opt/Pi_hole_Whitelist/scripts/whitelist.sh
+```  
+
+This will take a while, you might run through "Database is Locked" alert which can be ignored and let the process complete. When the process completes, 2 million domains will be added into your Pi-hole's Blocklist.
+
+**NOTE** 
+If you used all of the block lists above, be prepared to troubleshoot apps or websites that don't work because of blocked domains. If you run across a non-functional site or app, review the Pi-Hole logs for blocked domains and try whitelisting one at a time and re-testing your site/app to see what fixes the problem.
+
+Happy Adblocking :)
