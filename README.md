@@ -156,4 +156,4 @@ Click [here](https://github.com/SwaroopGiri/Pihole-with-unbound) to know how to 
 
 Click [here](https://github.com/SwaroopGiri/Pihole-with-Anonymized-ODOH) to know how to further configure Pihole with DNSCrypt-proxy with ODoH making it an encrypted anonymous DNS Resolver.
 
-Click [here](https://github.com/SwaroopGiri/Pivpn-wireguard-configuration) to know how to utilize networkwide adblocking of Pihole from anywhere outside of your local network by making raspberry pi into a wireguard VPN server.
+Click [here](https://github.com/SwaroopGiri/Pivpn-wireguard-configuration) to know how to utilize networkwide adblocking of Pihole from anywhere outside of your local network by making raspberry pi into a self-sustained wireguard VPN server.
